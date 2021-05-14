@@ -1,0 +1,32 @@
+name: MAX6421
+description: Low-Power Reset Circuit
+datasheet: https://datasheets.maximintegrated.com/en/ds/MAX6340-MAX6426.pdf
+keywords: IC, Digital, Reset
+
+pinout:
+  GND: 1
+  Vcc: 2
+  SRT: 3
+  RESET: 4
+
+properties:
+  out: RESET
+  passive: SRT
+  power: Vcc
+  ground: GND
+
+schematic:
+  symbol: IC
+  left: SRT
+  right: RESET
+  top: Vcc
+  bottom: GND
+
+housing:
+  outline: JEDEC TO-253
+
+  padWidth1: 1.31
+  padHeight1: 0.55
+  padWidth2: 1.31
+  padHeight2: 0.94
+  padDistance: 2

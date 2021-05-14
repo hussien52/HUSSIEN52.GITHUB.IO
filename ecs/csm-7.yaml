@@ -1,0 +1,20 @@
+name: CSM-7
+description: SMD Quartz Crystal
+datasheet: http://www.ecsxtal.com/store/pdf/csm_7.pdf
+keywords: Crystal
+
+schematic:
+  symbol: crystal
+
+housing:
+  pattern: crystal
+  bodyLength: 11.3-11.5
+  bodyWidth: 4.8
+  height: 4.3
+  leadWidth: 0.51-0.75
+  leadLength: 4.4
+  leadSpan: 13.2
+
+  padWidth: 5.5
+  padHeight: 2
+  padSpace: 4

@@ -1,0 +1,27 @@
+name: LM2940
+variations: SOT223
+suffix: -5.0, -8.0, -9.0, -10, -12, -15
+description: 1-A Low Dropout Regulator
+datasheet: http://www.ti.com/lit/ds/symlink/lm2940-n.pdf
+keywords: IC, analog, LDO, regulator
+
+pinout:
+  IN: 1
+  OUT: 3
+  GND: 2, 4
+
+properties:
+  power: IN, OUT
+  ground: GND
+  in: IN
+  out: OUT
+
+schematic:
+  symbol: IC
+  left: IN
+  right: OUT
+  bottom: GND
+
+housing@SOT223:
+  suffix: IMP
+  outline: JEDEC TO-261 AA

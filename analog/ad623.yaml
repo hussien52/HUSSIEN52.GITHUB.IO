@@ -1,0 +1,43 @@
+name: AD623
+variations: PDIP, SOIC, MSOP
+alias: AD623A, AD623B
+description: Single-Supply, Rail-to-Rail, Low Cost Instrumentation Amplifier
+datasheet: http://www.analog.com/media/en/technical-documentation/data-sheets/AD623.pdf
+keywords: IC, Analog, OpAmp
+
+pinout:
+  RG:
+    +RG: 8
+    -RG: 1
+  -IN: 2
+  +IN: 3
+  -VS: 4
+  REF: 5
+  OUTPUT: 6
+  +VS: 7
+
+properties:
+  power: +VS, -VS
+  in: +IN, -IN, REF
+  out: OUTPUT
+  passive: +RG, -RG
+  inverted: -IN
+
+schematic:
+  symbol: IC
+  left: +IN, RG, -IN
+  right: OUTPUT, REF
+  top: +VS
+  bottom: -VS
+
+housing@PDIP:
+  suffix: N
+  outline: JEDEC MS-001 BA
+
+housing@SOIC:
+  suffix: R
+  outline: JEDEC MS-012 AA
+
+housing@MSOP:
+  suffix: RM
+  outline: JEDEC MO-187 AA

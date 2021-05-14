@@ -1,0 +1,27 @@
+name: MAX1735
+suffix: EUK50-T, EUK30-T, EUK25-T
+description: 200mA, Negative-Output, Low-Dropout Linear Regulator
+datasheet: https://datasheets.maximintegrated.com/en/ds/MAX1735.pdf
+keywords: IC, Analog, LDO
+
+pinout:
+  GND: 1
+  IN: 2
+  ~SHDN: 3
+  SET: 4
+  OUT: 5
+
+properties:
+  in: IN, ~SHDN, SET
+  out: OUT
+  ground: GND
+  inverted: ~SHDN
+
+schematic:
+  symbol: IC
+  left: IN, ~SHDN
+  right: OUT, SET
+  bottom: GND
+
+housing:
+  outline: JEDEC MO-178 AA

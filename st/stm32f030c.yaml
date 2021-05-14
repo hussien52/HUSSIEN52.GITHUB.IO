@@ -1,0 +1,46 @@
+name: STM32F030C
+suffix: 6T6, 8T6
+description: 32-bit ARM Cortex-M0 CPU
+datasheet: http://www.st.com/resource/en/datasheet/stm32f030f4.pdf
+keywords: IC, Digital, CPU, ARM
+
+pinout:
+  PORTA:
+    PA0-15: 10-17, 29-34, 37, 38
+  PORTB:
+    PB0-15: 18-20, 39-43, 45, 46, 21, 22, 25-28
+  PORTC:
+    PC13-15: 2-4
+  PORTF:
+    PF0-1: 5, 6
+    PF6-7: 35, 36
+  CTRL:
+    BOOT0: 44
+    ~NRST: 7
+
+  VDD: 1, 24, 48
+  VDDA: 9
+  VSS: 23, 47
+  VSSA: 8
+
+  OSC_IN: 5
+  OSC_OUT: 6
+  OSC32_IN: 3
+  OSC32_OUT: 4
+
+properties:
+  in: BOOT0, ~NRST
+  bidir: PA0-15, PB0-15, PC13-15, PF0-1, PF6-7
+  power: VDD, VDDA
+  ground: VSS, VSSA
+  inverted: ~NRST
+
+schematic:
+  symbol: IC
+  left: PORTA, PORTC, CTRL
+  right: PORTB, PORTF
+  top: VDD, VDDA
+  bottom: VSS, VSSA
+
+housing:
+  outline: JEDEC MS-026 BBC

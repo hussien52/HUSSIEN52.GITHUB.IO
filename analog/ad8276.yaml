@@ -1,0 +1,40 @@
+name: AD8276A
+variations: MSOP, SOIC
+alias: AD8276B
+description: Low Power, Unity Gain Fully Differential Amplifier & ADC Driver
+datasheet: http://www.analog.com/media/en/technical-documentation/data-sheets/AD8276_8277.pdf
+keywords: IC, analog, OpAmp
+
+pinout:
+  IN:
+    -IN: 2
+    +IN: 3
+  OUT: 6
+  SENSE: 5
+  REF: 1
+  +VS: 7
+  -VS: 4
+  NC: 8
+
+properties:
+  power: +VS, -VS
+  in: +IN, -IN, REF
+  out: OUT
+  passive: SENSE
+  inverted: -IN
+  nc: NC
+
+schematic:
+  symbol: IC
+  left: IN, NC
+  right: REF, OUT, SENSE
+  top: +VS
+  bottom: -VS
+
+housing@MSOP:
+  suffix: RM
+  outline: JEDEC MO-187 AA
+
+housing@SOIC:
+  suffix: R
+  outline: JEDEC MS-012 AA

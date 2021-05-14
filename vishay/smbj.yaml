@@ -1,0 +1,16 @@
+name: SMBJ
+description: Surface Mount Transient Voltage Suppressor
+datasheet: http://www.vishay.com/docs/88392/smbj50a.pdf
+keywords: Diode, TVS
+
+schematic:
+  symbol: diode
+  options: TVS
+
+housing:
+  outline: JEDEC DO-214 AA
+  options: polarized
+
+  padWidth: 1.52
+  padHeight: 2.18
+  padSpan: 5.59

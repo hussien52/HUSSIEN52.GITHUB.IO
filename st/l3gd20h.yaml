@@ -1,0 +1,54 @@
+name: L3GD20H
+description: Three-axis digital output gyroscope
+datasheet: http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00060659.pdf
+keywords: IC, Digital, Sensor
+
+pinout:
+  Vdd_IO: 1
+  I2C:
+    SCL: 2
+    SDA: 3
+    SA0: 4
+  SPI:
+    SPC: 2
+    SDI: 3
+    SDO: 4
+  3WIRE:
+    SDO: 3
+  CS: 5
+  DRDY: 6
+  INT:
+    INT1: 7
+    INT2: 6
+  DEN: 8
+  RES: 9-11, 15
+  GND: 12, 13
+  Cap: 14
+  Vdd: 16
+
+properties:
+  power: Vdd_IO, Vdd
+  ground: GND, RES
+  in: CS, DEN
+  out: INT1-2, SCL, SDO
+  bidir: SDA
+  analog: Cap
+
+schematic:
+  symbol: IC
+  left: CS, I2C, DEN
+  right: INT, RES, Cap
+  top: Vdd_IO, Vdd
+  bottom: GND
+
+housing:
+  pattern: QFN
+  pitch: 0.5
+  bodyLength: 2.85-3.15
+  bodyWidth: 2.85-3.15
+  height: 1
+  pullBack: 0.1
+  rowCount: 5
+  columnCount: 3
+  leadLength: 0.29-0.41
+  leadWidth: 0.19-0.31

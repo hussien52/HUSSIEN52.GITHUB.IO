@@ -1,0 +1,43 @@
+name: BC846
+variations: SOT23, SOT323, SOT416
+alias: BC846A, BC846B
+description: 65 V, 100 mA NPN General Purpose Transistor
+datasheet: http://www.nxp.com/documents/data_sheet/BC846_SER.pdf
+keywords: Transistor, NPN
+
+pinout:
+  B: 1
+  E: 2
+  C: 3
+
+properties:
+  in: B
+  passive: C, E
+
+schematic:
+  symbol: transistor
+  options: npn
+
+housing@SOT23:
+  suffix: ''
+  outline: JEDEC TO-236 AB
+
+  padWidth: 0.7
+  padHeight: 0.6
+  padDistance: 2
+
+housing@SOT323:
+  suffix: 'W'
+  outline: JEITA SC-70
+
+  padWidth: 0.55
+  padHeight: 0.6
+  padDistance: 1.85
+
+housing@SOT416:
+  suffix: 'T'
+  outline: JEITA SC-75
+
+  padWidth: 0.6
+  padHeight: 0.5
+  padDistance: 1.3
